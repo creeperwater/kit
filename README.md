@@ -6,16 +6,12 @@ Play dom, and more.
 
 ## 为什么选择kit.js?
 
-- 相比于jquery，它简洁迅速，可控性强
-- 低耦合性，更加灵活，随调随用
-- 只提供方法不提供对象，贴近原生js
-- 作者自用，会保持它的迭代和更新
+- 比Jquery更加简洁迅速
+- 函数式调用，节省内存
+- 贴近原生js，便于扩展
+- 作者自用，保持迭代和更新
 
 ## 如何使用kit.js?
-
-### kit.js的位置
-
-方法是kit.js全部，目前有三个函数，他们在闭包环境中通过指令附着于window对象，在dom环境中可以直接调用。三个函数本身是处于严格模式下的，这有利于规范语法、提升速度和规避可能存在的错误，并面向和拥抱js的下一个版本。
 
 ### $(`name:string`,`type:bool`)
 
@@ -38,9 +34,10 @@ Play dom, and more.
 </ul>
 <section id="main"></section>
 <section id="user"></section>
+<script src="kit.js"></script>
 ```
 
-网页的一部分
+网页的一部分，展示了如何调用
 
 ```javascript
 $('.bar>li').forEach(ele => {
