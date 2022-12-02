@@ -9,11 +9,11 @@
     else
       return output;
   }
-  win.atr=function(input,attr,value=false){
+  win.atr=function(input,name,value=false){
     if(value){
-      input.setAttribute(attr,value);
+      input.setAttribute(name,value);
     }else{
-      return input.getAttribute(attr);
+      return input.getAttribute(name);
     }
   }
   win.get=function(url){
@@ -28,6 +28,24 @@
       };
       get.open('GET',url);
       get.send();
+    });
+  }
+  win.loc=function(name,value=false){
+    if(value){
+      localStorage.setItem(name,value);
+    }else{
+      return localStorage.getItem(name);
+    }
+    //localStorage.removeItem('myCat');localStorage.clear();
+  }
+  win.$.show=function(key){
+    $(key,false).forEach(ele=> {
+      ele.style.display=null;
+    });
+  }
+  win.$.hide=function(key){
+    $(key,false).forEach(ele=> {
+      ele.style.display='none';
     });
   }
 })(window);
